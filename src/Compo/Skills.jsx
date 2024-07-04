@@ -9,13 +9,8 @@ import {
   FaNodeJs,
 } from "react-icons/fa";
 
-const Aboutme = () => {
-  const handleDownloadCV = () => {
-    window.open(
-      "https://drive.google.com/uc?export=download&id=12cBLk7x09lrBjJMptsLlW9nNrRrT33T0",
-      "_blank"
-    );
-  };
+const Skills = () => {
+
 
   return (
     <section
@@ -23,26 +18,10 @@ const Aboutme = () => {
       id="about"
     >
       <div className="text-center mb-6">
-        <h1 className="text-4xl font-bold">About Me</h1>
+        <h1 className="text-4xl font-bold">Skills</h1>
       </div>
       <div className="flex flex-wrap justify-center">
-        <div className="w-full lg:w-1/2 p-4">
-          <div className="relative flex flex-col items-center py-8 px-5 w-full bg-white text-black shadow-lg rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4">My Introduction</h3>
-            <p className="text-center text-sm text-gray-500 mb-6">
-              I am well-versed in HTML, CSS, and JavaScript, and other
-              cutting-edge frameworks and libraries, which allows me to
-              implement interactive features. Additionally, I have experience
-              working with content management systems (CMS) like WordPress.
-            </p>
-            <button
-              onClick={handleDownloadCV}
-              className="bg-blue-500 text-white rounded-full py-2 px-4 hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105"
-            >
-              Download CV
-            </button>
-          </div>
-        </div>
+      
         <div className="w-full lg:w-1/2 p-4">
           <div className="mb-4">
             <div className="mb-6">
@@ -175,4 +154,4 @@ const Aboutme = () => {
   );
 };
 
-export default Aboutme;
+export default Skills;

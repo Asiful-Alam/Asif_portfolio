@@ -2,14 +2,31 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
-const Banner = () => {
+const Aboutme = () => {
+  const handleDownloadCV = () => {
+    window.open(
+      "https://drive.google.com/uc?export=download&id=12cBLk7x09lrBjJMptsLlW9nNrRrT33T0",
+      "_blank"
+    );
+  };
+
   return (
     <div className="flex flex-col-reverse lg:flex-row items-center justify-between bg-gradient-to-r from-purple-600 to-indigo-700 text-white p-10 lg:p-20">
       <div className="text-center lg:text-left lg:w-1/2 space-y-5">
-        <h1 className="text-5xl font-extrabold">Hello, I am Asif</h1>
-        <TypeAnimation
-          sequence={["Fullstack Web Developer.", 10000]}
-        />
+        <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight">
+          Hello, I am Asif
+        </h1>
+        <TypeAnimation className="text-2xl" sequence={["Fullstack Web Developer."]} />
+        <p className="text-base lg:text-lg text-gray-300 mb-6">
+          I am well-versed in HTML, CSS, and JavaScript, and other cutting-edge frameworks and libraries, which allows me to implement interactive features. Additionally, I have experience working with content management systems (CMS) like WordPress.
+        </p>
+        <button
+          onClick={handleDownloadCV}
+          className="bg-blue-500 text-white rounded-full py-2 px-6 lg:px-8 hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105"
+        >
+          Download CV
+        </button>
+        
         <div className="flex justify-center lg:justify-start space-x-4 mt-5">
           <a
             href="https://github.com/your-profile"
@@ -45,9 +62,9 @@ const Banner = () => {
       </div>
       <div className="relative lg:w-1/2 mt-10 lg:mt-0">
         <motion.img
-          src="src\assets\asif pic.jpeg"
+          src="https://i.ibb.co/fX14xVx/asif-pic.jpg"
           alt="Profile"
-          className="rounded-full w-64 h-64 object-cover shadow-2xl border-4 border-white"
+          className="rounded-full w-48 md:w-64 h-48 md:h-64 object-cover shadow-2xl border-4 border-white"
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         />
@@ -56,4 +73,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Aboutme;

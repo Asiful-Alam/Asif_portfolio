@@ -23,19 +23,19 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 w-52 p-2 shadow bg-white rounded-box text-gray-800">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-2xl font-bold">My Portfolio</a>
+        <a href="#home" className="btn btn-ghost text-2xl font-bold">My Portfolio</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-4">
-          <li><a href="#home" className="hover:text-gray-300">Home</a></li>
-          <li><a href="#about" className="hover:text-gray-300">About</a></li>
-          <li><a href="#projects" className="hover:text-gray-300">Projects</a></li>
-          <li><a href="#contact" className="hover:text-gray-300">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div className="navbar-end">
