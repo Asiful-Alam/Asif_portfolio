@@ -1,46 +1,71 @@
-import React from 'react';
+import {
+  Home,
+  Briefcase,
+  Layers,
+  Wrench,
+  Image,
+  Pen,
+  User,
+  Phone,
+} from "lucide-react";
+import logo from "../assets/logggggo.jfif";
+
+const links = [
+  { href: "/", label: "Home", icon: Home },
+  { href: "#services", label: "Services", icon: Wrench },
+  { href: "#industries", label: "Industries", icon: Layers },
+  { href: "#tools", label: "Free Tools", icon: Briefcase },
+  { href: "#portfolio", label: "Portfolio", icon: Image },
+  { href: "#blog", label: "Blog", icon: Pen },
+  { href: "#about", label: "About", icon: User },
+  { href: "#contact", label: "Contact", icon: Phone },
+];
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-gradient-to-r from-teal-500 to-blue-600 text-white shadow-lg">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
+    <div className="flex bg-white text-gray-800">
+      {/* Sidebar */}
+      <div className="h-screen w-80 fixed flex flex-col justify-between border-r z-10 bg-white text-gray-800">
+        <div className="p-6">
+          {/* Logo */}
+          <div className="flex items-center justify-center gap-3 mb-8 p-8">
+            <img
+              src={logo}
+              alt="Orpyn Logo"
+              className="w-72 flex justify-center"
+            />
           </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 w-52 p-2 shadow bg-white rounded-box text-gray-800">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+          <hr className="border-gray-200 mb-6" />
+
+          {/* Navigation Links with Styled Button */}
+          <nav className="space-y-4">
+            {links.map(({ href, label, icon: Icon }) => (
+              <a
+                key={href}
+                href={href}
+                className="relative inline-block px-4 py-3 w-full font-medium group"
+              >
+               <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-cyan-700 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                <span className="absolute inset-0 w-full h-full  border-2 border-white group-hover:bg-white dark:bg-white dark:border-cyan-700 dark:group-hover:text-black"></span>
+                <span className="relative flex items-center gap-3 text-black group-hover:text-black dark:text-black dark:group-hover:text-black text-4xl">
+                  <Icon size={36} />
+                  {label}
+                </span>
+              </a>
+            ))}
+          </nav>
         </div>
-        <a href="#home" className="btn btn-ghost text-2xl font-bold">My Portfolio</a>
+
+        {/* Footer */}
+        <div className="p-6 text-sm">
+          <p className="text-xs text-gray-500">
+            &copy; 2025 Orpyn. All rights reserved.
+          </p>
+        </div>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 space-x-4">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div className="navbar-end">
-        <a href="#contact" className="btn bg-teal-500 text-white hover:bg-teal-600">Hire Me</a>
-      </div>
+
+      {/* Main content */}
+      <div className="ml-80 p-6 w-full"></div>
     </div>
   );
 };

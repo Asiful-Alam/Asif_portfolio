@@ -1,29 +1,25 @@
-
-import Projects from '../Compo/Projects.jsx';
-// import Contact from '../Compo/Contact.jsx';
-import AnimatedComponent from '../design/AnimatedComponent.jsx';
-import Mail from '../Compo/Mail.jsx';
-import Skills from '../Compo/Skills.jsx';
-import Aboutme from '../Component/Aboutme.jsx';
-import Education from '../Compo/Education.jsx';
-
+import Banner from "../Component/Banner";
+import BlogSection from "../Component/BlogSection";
+import BusinessCategories from "../Component/BusinessCategories";
+import BusinessIntro from "../Component/BusinessIntro";
+import ContactWhyUs from "../Component/ContactWhyUs";
+import ServicesSection from "../Component/ServicesSection ";
+import StatsSection from "../Component/StatsSection";
+import ToolsSection from "../Component/ToolsSection";
 
 const Home = () => {
-    return (
-        
-        <div className="px-4 md:px-8 lg:px-16 xl:px-24">
-            <div className=''>
-              <AnimatedComponent>
-              <Aboutme></Aboutme>
-              <Education></Education>
-             <Skills></Skills>
-              <Projects></Projects>
-             <Mail></Mail>
-              </AnimatedComponent>
-              
-            </div>
-        </div>
-    );
+  return (
+    <div className="ml-64 w-auto h-auto"> 
+      <Banner />
+      <BusinessIntro />
+      <BusinessCategories></BusinessCategories>
+      <ServicesSection></ServicesSection>
+      <StatsSection></StatsSection>
+      <ToolsSection></ToolsSection>
+      <ContactWhyUs></ContactWhyUs>
+      <BlogSection></BlogSection>
+    </div>
+  );
 };
 
 export default Home;

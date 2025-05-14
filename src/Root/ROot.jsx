@@ -1,17 +1,20 @@
-import React from 'react';
 import { Outlet } from "react-router-dom";
-import Footer from '../Compo/Footer';
-import Navbar from '../Component/Navbar';
-const ROot = () => {
-    return (
-        <div>
-           <div className="px-4 md:px-8 lg:px-16 xl:px-24">
-           <Navbar></Navbar>
-           </div>
-            <Outlet></Outlet>
-            <Footer></Footer>
-        </div>
-    );
+import Navbar from "../Component/Navbar";
+import Footer from "../Component/Footer";
+
+const Root = () => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      
+      {/* Main Content */}
+      <div className="flex-grow">
+        <Outlet />
+      </div>
+      
+      <Footer />
+    </div>
+  );
 };
 
-export default ROot;
+export default Root;
