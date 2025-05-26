@@ -3,13 +3,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules'; 
 import 'swiper/css';
 
-// Replace with your actual images
 import slide2 from '../assets/logo.png';
 import slide3 from '../assets/logo.png';
 
 const BusinessIntro = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between bg-white px-6 md:px-16 py-12">
+    <section className="flex flex-col md:flex-row items-center justify-between bg-transparent px-6 md:px-16 py-12">
       {/* Left - Swiper Carousel */}
       <div className="md:w-1/2 w-full mb-8 md:mb-0">
         <Swiper
@@ -49,46 +48,45 @@ const BusinessIntro = () => {
       </div>
 
       {/* Right - Content */}
-      <div className="md:w-1/2 md:pl-12 text-center md:text-left">
-        <p className="text-black font-semibold text-lg uppercase tracking-wide mb-2">
+      <div className=" text-center md:text-left">
+        {/* <p className="text-black font-semibold text-4xl uppercase tracking-wide mb-2">
           Welcome to our company
-        </p>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        </p> */}
+        <h2 className="text-7xl font-bold text-gray-900 mb-4">
           Make Your Business Great With Tronix
         </h2>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 text-xl mb-6">
           An IT solution service company may serve clients from various industries such as healthcare,
           finance, education, and manufacturing. They may work on a project basis...
         </p>
-
         <div className="flex flex-col sm:flex-row justify-between gap-6 mb-8">
           {/* Left: Year */}
           <div className="flex items-center sm:items-start sm:flex-col">
-            <div className="text-5xl text-blue-600 font-bold sm:mb-2 mr-4 sm:mr-0">1996</div>
+            <div className="text-7xl text-[hsl(174,75%,27%)] font-bold sm:mb-2 mr-4 sm:mr-0">1996</div>
             <div className="text-sm font-semibold text-gray-700 uppercase tracking-wide">
               Started Journey
             </div>
           </div>
 
           {/* Right: Features */}
-          <ul className="space-y-3 text-left flex-1">
+          <ul className="space-y-3 text-left flex-1 text-xl">
             <li className="flex items-center text-gray-700">
-              <FaCheckCircle className="text-blue-600 mr-2" />
+              <FaCheckCircle className="text-[#11786d] mr-2" />
               Emergency Solutions Anytime
             </li>
             <li className="flex items-center text-gray-700">
-              <FaCheckCircle className="text-blue-600 mr-2" />
+              <FaCheckCircle className="text-[#11786d] mr-2" />
               Affordable price up to 2 years
             </li>
             <li className="flex items-center text-gray-700">
-              <FaCheckCircle className="text-blue-600 mr-2" />
+              <FaCheckCircle className="text-[#11786d] mr-2" />
               Reliable & Experienced Team
             </li>
           </ul>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full">
+          <button className="bg-[#11786d] hover:bg-[#0e655a] text-white font-semibold py-3 px-6 rounded-full">
             Read More
           </button>
         </div>

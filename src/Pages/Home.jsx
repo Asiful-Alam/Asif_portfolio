@@ -9,15 +9,19 @@ import ToolsSection from "../Component/ToolsSection";
 
 const Home = () => {
   return (
-    <div className="ml-64 w-auto h-auto"> 
+    <div className="ml-64 w-auto h-auto ">
       <Banner />
-      <BusinessIntro />
-      <BusinessCategories></BusinessCategories>
-      <ServicesSection></ServicesSection>
-      <StatsSection></StatsSection>
-      <ToolsSection></ToolsSection>
-      <ContactWhyUs></ContactWhyUs>
-      <BlogSection></BlogSection>
+      
+      {/* Next section starts here to allow scroll from banner */}
+      <div id="next-section">
+        <BusinessIntro />
+        <BusinessCategories />
+        <ServicesSection />
+        <StatsSection />
+        <ToolsSection />
+        <ContactWhyUs />
+        <BlogSection />
+      </div>
     </div>
   );
 };
