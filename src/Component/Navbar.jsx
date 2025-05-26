@@ -9,7 +9,7 @@ import {
   Phone,
 } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/logggggo.jfif";
+import logo from "../assets/logo rmv bg.png";
 
 const links = [
   { href: "/", label: "Home", icon: Home },
@@ -33,9 +33,9 @@ const Navbar = () => {
     <div className="flex text-gray-800">
       {/* Sidebar */}
       <aside className="h-screen w-64 bg-transparent fixed flex flex-col justify-between border-r shadow-sm">
-        <div className="p-6">
+        <div className="">
           {/* Logo */}
-          <div className="flex items-center justify-center mb-10">
+          <div className="flex items-center justify-center mb-10 pt-6">
             <img src={logo} alt="Orpyn Logo" className="w-96" />
           </div>
 
@@ -45,7 +45,7 @@ const Navbar = () => {
               <a
                 key={href}
                 href={href}
-                className="flex items-center gap-4 px-4 py-3 rounded hover:bg-gray-100 transition text-gray-700 text-2xl font-medium"
+                className="flex items-center gap-4 px-4 py-3 rounded hover:bg-gray-100 transition text-gray-700 text-4xl font-medium"
               >
                 <Icon size={40} />
                 {label}
